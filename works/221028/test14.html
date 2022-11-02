@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tset14.html</title>
+  <style>
+    .tit {
+      width: 100px;
+      background-color: gold;
+    }
+    #good1 {
+      /* width: 200px;
+      height: 150px; */
+      background-color: pink;
+      padding: 10px; 
+      margin: 15px;
+      border: 6px solid red;
+    }
+    #good2 {
+      background-color: blue;
+    }
+    input[type="text"] {
+      color: brown;
+      background-color: gold;
+      font-size: 20px;
+    }
+    .btn {
+      cursor: pointer;
+    }
+    #img1 {
+      width: 200px;
+      border: 5px solid blue;
+    }
+    #good3 {
+      line-height: 50px;
+      /* text-align: center; */
+      /* text-indent: 50px;  들여쓰기 */
+      margin-left: 20px;    /*여백*/
+      letter-spacing: 5px;   /*글자간격*/
+      word-spacing: 20px;   /*한글자마다 간격*/
+    }
+    
+  </style>
+</head>
+<body>
+  <h2>Form태그와 CSS</h2>
+  <form>
+    <p>
+      <label for="mid" class="tit" style="width:200px">아이디</label>
+      <input type="text" name="mid" id="mid" placeholder="아이디를 입력하세요." autofocus />
+    </p>
+    <p>
+      <label for="pwd" class="tit">비밀번호</label>
+      <input type="password" name="pwd" id="pwd" placeholder="비밀번호를 입력하세요." />
+    </p>
+    <p>
+      <label for="age" class="tit">비밀번호</label>
+      <input type="number" name="age" id="age" placeholder="나이를 입력하세요." id="age" size="3" maxlength="2" />
+    </p>
+    <p>
+      <input type="submit" value="전송" class="btn" />
+      <input type="reset" value="취소" class="btn" />
+    </p>
+    <p>
+      <img src="../../images/5.jpg" id="img1">
+    </p>
+    <div id="good1">안녕하세요</div>
+    <div id="good2">안녕하세요</div>
+    <div id="good3">안녕 하세요 반갑 습니다.</div>
+    <div id="good4">안녕 하세요</div>
+  </form>
+</body>
+</html>

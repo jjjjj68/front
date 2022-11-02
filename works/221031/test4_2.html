@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test4_2.html(테이블/레이블에 그림 지정)</title>
+  <style>
+    table {
+      width: 400px;
+      height: 300px;
+      border-collapse: collapse; /*선과 선사이를 무시*/
+      /* background: linear-gradient(to bottom, white, blue); */
+      background: radial-gradient(circle, white, blue);
+    }
+    th, td {
+      border: 1px solid gray;
+      text-align: center  ;
+    }
+    #tr1, #layer1{background: linear-gradient(to right, yellow, red);}
+    #tr2, #layer2 {background: linear-gradient(to right, yellow, red);}
+    #tr3, #layer3{
+      height: 100px;
+      background: linear-gradient(to bottom, green, white);
+    }
+    #tr4, #layer4{
+      height: 100px;
+      background: radial-gradient(green 30%, white 20%, blue 50%);
+    }
+    #layer1, #layer2, #layer3, #layer4 {
+      width: 400px;
+      height: 300px;
+      border: 1px solid gray;
+      margin: 20px;
+    } 
+  </style>
+</head>
+<body>
+  <h2>테이블 연습</h2>
+  <br/>
+  <div>
+    <table>
+      <tbody>
+        <tr>
+          <th>1</th>
+          <th>2</th>
+          <th class="td3">3</th>
+          <th>4</th>
+        </tr>
+      </tbody>
+    <thead>
+        <tr id="tr1">
+          <td>1</td>
+          <td>2</td>
+          <td class="td3">3</td>
+          <td>4</td>
+        </tr>
+      </thead>
+      <tr id="tr2">
+        <td>1</td>
+        <td>2</td>
+        <td class="td3">3</td>
+        <td>4</td>
+      </tr>
+      <tr id="tr3">
+        <td>1</td>
+        <td>2</td>
+        <td class="td3">3</td>
+        <td>4</td>
+      </tr>
+      <tfoot>
+        <tr id="tr4">
+          <td>1</td>
+          <td>2</td>
+          <td class="td3">3</td>
+          <td>4</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  <hr/>
+  <div id="layer1"></div>
+  <div id="layer2"></div>
+  <div id="layer3"></div>
+  <div id="layer4"></div>
+</body>
+</html>

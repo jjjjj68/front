@@ -1,0 +1,152 @@
+<html>
+  <head>
+    <title>표태그 연습</title>
+  </head>
+  <body>
+    <h2>테이블 연습</h2>
+    <!--
+    테이블 : <table> ~~~~ </table>
+    행 : <tr> ~~~~ </tr>
+    열 : <td> ~~~~ </td>
+    -->
+    <br/>
+    <h2>길동이네 가족소개 1</h2>
+    <table border>
+      <tr>
+        <td><b>관&nbsp;계</b></td>
+        <td><b>성&nbsp;명</b></td>
+        <td><b>직&nbsp;업</b></td>
+      </tr>
+      <tr>
+        <td><b>아버지</b></td>
+        <td><b>홍장군</b></td>
+        <td><b>군 인</b></td>
+      </tr>
+      <tr>
+        <td><b>어머님</b></td>
+        <td><b>김말숙</b></td>
+        <td><b>회사원</b></td>
+      </tr>
+      
+    </table>
+    <br/><br/>
+    <h2>길동이네 가족소개 2</h2>
+    <table border width="300px" height="250px">
+      <tr>
+        <td align="center"><b>관&nbsp;계</b></td>
+        <td> <p align="center">성&nbsp;명</p></td>
+        <td><b>직&nbsp;업</b></td>
+      </tr>
+      <tr>
+        <td><b>아버지</b></td>
+        <td><b>홍장군</b></td>
+        <td><b>군 인</b></td>
+      </tr>
+      <tr align="center">
+        <td><b>어머님</b></td>
+        <td><b>김말숙</b></td>
+        <td><b>회사원</b></td>
+      </tr>
+    </table>
+    <br/><br/>
+    
+    <h2>길동이네 가족소개 3</h2>    <!--셀 안에 여백 넣기 : cellpadding="" -->
+    <table border align="center" cellpadding="20px" background="../../images/2.jpg">
+      <caption><b>길동이네 <font size="5" color="blue">가족</font>을 소개합니다</b></caption>           <!--셀 바로 위 제목 : <caption></caption> -->
+      <tr>
+        <td><b>관계</b></td>
+        <td bgcolor="red"><b>성명</b></td>
+        <td><b>직업</b></td>
+      </tr>
+      <tr bgcolor="#ff0">
+        <td><b>아버지</b></td>
+        <td>홍<i>장</i>군</td>
+        <td><b>군 인</b></td>
+      </tr>
+      <tr>
+        <td><b>어머님</b></td>
+        <td><b>김<sup>말</sup>숙</b></td>
+        <td><b>회<sub>사</sub>원</b></td>
+      </tr>
+      <caption align="bottom"><b>길동이네 <font size="5" color="red">집</font>에 놀러오세요</b></caption>     <!--<caption align="bottom"> 셀 아래-->
+    </table>
+    <br/><br/>
+    
+    <h2>길동이네 가족소개 4</h2>
+    <!--<table border bgcolor="#ff0" >-->
+    <table border="10px" cellpadding="20px" bordercolor="red" cellspacing="15px">            <!--테이블과 테이블의 간격 : cellspacing:"" -->
+      <tr>
+        <td><b>관&nbsp;계</b></td>
+        <td><b>성&nbsp;명</b></td>
+        <td><b>직&nbsp;업</b></td>
+      </tr>
+      <tr>
+        <td><b>아버지</b></td>
+        <td><b>홍장군</b></td>
+        <td><b>군 인</b></td>
+      </tr>
+      <tr>
+        <td><b>어머님</b></td>
+        <td><b>김말숙</b></td>
+        <td><b>회사원</b></td>
+      </tr>
+    </table>
+    <br/><br/>
+    
+    <h2>길동이네 가족소개 5</h2>
+    <table border="0px" cellpadding="15px" cellspacing="0px">
+      <tr bgcolor="red">
+        <td><b>관&nbsp;계</b></td>
+        <td><b>성&nbsp;명</b></td>
+        <td><b>직&nbsp;업</b></td>
+      </tr>
+      <tr bgcolor="green">
+        <td><b>아버지</b></td>
+        <td><b>홍장군</b></td>
+        <td><b>군 인</b></td>
+      </tr>
+      <tr bgcolor="blue">
+        <td><b>어머님</b></td>
+        <td><b>김말숙</b></td>
+        <td><b>회사원</b></td>
+      </tr>
+      
+    </table>
+    <br/><br/>  
+    
+    <h2>길동이네 가족소개 6</h2>
+    <table border cellpadding="30px" cellspacing="1px">
+      <!-- <tr align="center"> -->
+      <tr bgcolor="pink">
+        <th>관계</th>        <!--<th> ~~~~ </th> : 진하게하고 가운데정렬-->
+        <th colspan="2">성명/직업</th>   <!--colspan="" 열 합치기-->
+        <!-- <td><b>직업</b></td> -->
+        <th>비 고</th>
+      </tr>
+      <tr>
+        <td rowspan="2">부모</td>          <!--rowspan="" : 행 합치기-->
+        <td><b>홍장군</b></td>
+        <td><b>군 인</b></td>
+        <td rowspan="2"> <a href= "../../images/1.jpg" target="_black" title="퇴사사진"> <img src="../../images/1.jpg" width="100px"></a></td>
+      </tr>
+      <tr>
+        <!-- <td><b>어머님</b></td> -->
+        <td><b>김말숙</b></td>
+        <td><b>회사원</b></td>
+      </tr>
+      <tr>
+        <td colspan="4" align="center">놀러오세요.</td>
+      </tr>
+      
+    </table>
+    <br/><br/>  
+    
+    
+    <dr>
+      <dt>
+        <dd>
+        </dd>
+      </dt>
+    </dr>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test6.html</title>
+  <style>
+    .item {
+      width: 100px;
+      height: 600px;
+      border: 1px solid blue;
+      margin: 10px;
+      color: #000;
+    }
+    .container {
+      height: 100vh; 
+      display: flex;flex-flow: row nowrap;
+      flex-flow: row nowrap;
+    }
+    
+    /* 1번째 영역은 고정하고 2번째 영역만을 크기조정하고자 한다. */
+    
+    /* 각각의 개별항목에 따른 내용의 출력 순서를 변경해보자 (폭의 비율은 1:2:1) */
+    /* 글내용의 출력 순서는 2번 -> 3번 -> 1번 순으로 출력한다. */
+    .item:nth-child(1) {
+      flex: 1;
+      text-align: center;
+      padding: 40px 0 0;
+      height: 160px;
+      align-self: flex-start;   /* 위쪽정렬 */
+      order: 3;
+    }
+    .item:nth-child(2) {
+      flex: 2;
+      text-align: center;
+      align-self: flex-end;   /* 아래쪽 정렬 */
+      order: 1;
+    }
+    .item:nth-child(3) {
+      flex: 1;
+      text-align: center;
+      align-self: center;   /* 중앙(수직) 정렬 */
+      order: 2;
+    }
+  </style>
+</head>
+<body>
+  <div class="container"> <!-- '플렉스 컨테이너'라고 부른다. -->
+    <div class="item" style="background-color:#2274FF">1.안녕하세요</div>  <!-- '플렉스 아이템'이라고 부른다.-->
+    <div class="item" style="background-color:#FF7490">2.안녕하세요</div>
+    <div class="item" style="background-color:#a5Cf95">3.안녕하세요</div>
+    <!-- <div class="item" style="background-color:#95B5FF">4.안녕하세요</div> -->
+    <!-- <div class="item" style="background-color:#9675C9">5.안녕하세요</div> -->
+    <!-- <div class="item" style="background-color:#69CFE5">6.안녕하세요</div>
+    <div class="item" style="background-color:#F25F9B">7.안녕하세요</div>
+    <div class="item" style="background-color:#E6B046">8.안녕하세요</div>
+    <div class="item" style="background-color:#91DDCD">9.안녕하세요</div>
+    <div class="item" style="background-color:#744383">10.안녕하세요</div> -->
+  </div>
+</body>
+</html>

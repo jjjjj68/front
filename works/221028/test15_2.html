@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test15_2.html</title>
+  <style>
+    #content1, #content2 {
+      width: 380px;
+     float: left; /*left right (center)*/
+    }
+    #content3 {
+      clear: both;
+    }
+    /* #content1 {
+      float: left;
+    }
+    #content2 {
+      float: right;
+    } */
+    ul {
+      list-style: none;
+    }
+    fieldset {
+      /* margin: 25px 0px 30px 10px; 시계방향 (위 오른쪽 아래 왼쪽) */
+      /* margin: 25px; 시계방향 (위 오른쪽 아래 왼쪽)의 마진을 의미 */
+      /* margin: 25px 10px; 25 10 25 10 (위 아래) (오른쪽 왼쪽) */
+      margin: 25px 10px 40px; /*25 10 40 10  짝은 정해저있음*/
+      /* padding: 20px;(위 오른쪽 아래 왼쪽)*/
+      /* padding: 20px 10px; (위아래:20, 오른쪽왼쪽:10) */
+       padding: 20px 10px 30px;/* 위20 아래30 오른쪽왼쪽:10*/
+    }
+    legend{
+      color: blue;
+      font-size: 15pt;
+      font-weight: bolder;
+    }
+    ul li {
+      margin: 20px 0px;
+    }
+    .tit1 {
+      width: 80px;
+      float: left;
+    }
+    .btn {
+      margin: 0px 20px 0px 0px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <form>
+      <div id="content1">
+        <fieldset>
+          <legend>로그인1</legend>
+          <ul>
+            <li>
+              <label for="mid" class="tit1">아이디</label>
+              <input type="text" name="mid" id="mid" />
+            </li>
+            <li>
+              <label for="pwd" class="tit1">패스워드</label>
+              <input type="text" name="pwd" id="pwd" />
+            </li>
+            <li>
+              <input type="submit" value="로그인" class="btn"/>
+              <input type="reset" value="취소" />
+            </li>
+          </ul>
+        </fieldset>
+      </div>
+      <div id="content2">
+        <fieldset>
+          <legend>로그인2</legend>
+          <ul>
+            <li>
+              <label for="mid">아이디</label>
+              <input type="text" name="mid" id="mid" />
+            </li>
+            <li>
+              <label for="pwd">패스워드</label>
+              <input type="text" name="pwd" id="pwd" />
+            </li>
+            <li>
+              <input type="submit" value="로그인" />
+              <input type="reset" value="취소" />
+            </li>
+          </ul>
+        </fieldset>
+      </div>
+      <div id="content3">
+        <fieldset>
+          <legend>로그인3</legend>
+          <ul>
+            <li>
+              <label for="mid">아이디</label>
+              <input type="text" name="mid" id="mid" />
+            </li>
+            <li>
+              <label for="pwd">패스워드</label>
+              <input type="text" name="pwd" id="pwd" />
+            </li>
+            <li>
+              <input type="submit" value="로그인" />
+              <input type="reset" value="취소" />
+            </li>
+          </ul>
+        </fieldset>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

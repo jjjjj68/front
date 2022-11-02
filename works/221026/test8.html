@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>폼(양식)태그 연습2</title>
+  </head>
+  <body>
+    <h2>Form태그 = 양식태그</h2>
+    <form name="myform" method="post" action="#">
+      <table border cellpadding="10px" cellspacing="0px">
+        <tr>
+          <td>
+            <label for="name">이름</label>
+          </td>
+          <td>
+        
+            <input type="text" name="name" id="name">
+          </td>
+        </tr>
+          <td>
+            <label for="mail">메일주소</label>
+          </td>
+          <td>
+            <input type="mail" name="mail" id="mail" value="dlwo6466@naver.com">
+          </td>
+        </tr>
+        <tr>
+          <td valign="top"> 좋아하는 산</td>
+          <td>
+            <select name="mnt" size="5" multiple>
+              <option>백두산</option>
+              <option>한라산</option>
+              <option>지리산</option>
+              <option>설악산</option>
+              <option>태백산</option>
+              <option>북한산</option>
+              <option>우암산</option>
+          </td>
+        </tr>
+            
+        <tr>
+          <td>첨부파일</td>
+          <td>
+            <input type="file" name="file">
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center">
+            <input type="submit" />                   <!--버튼 만드는 법  마지막에 엔터만눌러도 출력됨-->
+           <!-- <input type="submit" value="전송"/> -->
+           
+            <input type="reset" value="다시입력"/>  <!--type="reset" 다없어짐-->
+            <input type="button" value="회원가입"> <!--모든것이 다 맞아야 넘어감-->
+          </td>
+        </tr>
+    
+    </form>
+  </body>
+</html>

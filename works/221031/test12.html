@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test12.html</title>
+  <style>
+    .bb1 {
+      /* display: inline; */
+      display: block;
+    }
+    .aa1,.aa2,.aa3 {
+      display: inline;
+    }
+    .aa2 {
+      visibility: hidden;
+    }
+    .aa4 {
+      display: none;
+    }
+    .aa5, .aa6, .aa7 {
+      border:1px solid gray;
+      width: 500px;
+    }
+    .bb1 {
+      /* display: inline; */
+      display: block;
+      border: 1px solid blue;
+      width: 100px;
+      padding: 10px;
+      margin: 10px;
+    }
+    .cc1 {
+      display: inline;
+      width: 100px;     /*inline 형식은 폭과 길이 지정 불가*/
+      border: 1px solid gray;
+      margin: 10px;
+      padding: 15px;
+    }
+    .dd1 {
+      display: inline-block;
+      width: 200px;
+      border: 1px solid gray;
+      margin: 10px;
+      padding: 15px;
+
+    }
+  </style>
+</head>
+<body>
+  <h2>Display 속성</h2>
+  <p>Display속성은 각각의 요소를 어떻게 보여줄지를 결정한다.</p>
+  <p>속성처리값? visibility(기본값:보이기) /hidden(감추기) /inherit(부모요소의 값을 상속받아서 사용) </p>
+  <p>
+    none : 보여주지 않는다.
+    inline : 인라인상태(자신의 고유한 영역만 확보) -단어의 의미로만 해석..? 크기조정불가<br>
+    block :박스영역을 차지하는 속성 - 문단의 의미로 해석....! 크기조정가능 <br>
+    inline-block: inline의 속석와 block의 속성을 합성
+  </p>
+  <h2>사용 예제</h2>
+  <div class="aa1">1.안녕!!!</div>
+  <div class="aa2">2.안녕!!!</div>
+  <div class="aa3">3.안녕!!!</div>
+  <div class="aa4">4.안녕!!!</div>
+  <hr/>
+  <h2>Block의 속성</h2>
+  <div class="aa5">
+    5. 안녕!!! <span class="bb1">bb1.</span><font color="red">안녕!!</font>반갑습니다.
+  </div>
+  <hr />
+  <h2>InLine 속성</h2>
+  <div class="aa6">
+    6. Block형식입니다. 
+    <span class="cc1">cc1.</span>
+    <font color="blue">6.안녕!!!</font>.반갑습니다
+  </div>
+  <hr/>
+  <h2>InLine-Block형식 속성</h2>
+  <div class="aa7">
+    7. InLine-Block형식입니다. 
+    <span class="dd1">cc1.</span>
+    <font color="green">7.안녕!!!</font>.반갑습니다
+  </div>
+</body>
+</html>

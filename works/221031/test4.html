@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test4.html(테이블/레이블에 그림 지정)</title>
+  <style>
+    table {
+      width: 400px;
+      height: 300px;
+      border-collapse: collapse; /*선과 선사이를 무시*/
+    }
+    th, td {
+      border: 1px solid gray;
+    }
+    th {
+        padding: 10px;
+      }
+    td {
+      text-align: center;
+    }
+    .td3 {
+      background-color: coral;
+    }
+    thead {
+      background-color: pink;
+    }
+    tfoot {
+      background-color: brown;
+      text-align: center;
+      height: 50px;
+    }
+    
+    
+  </style>
+</head>
+<body>
+  <h2>테이블 연습</h2>
+  <br/>
+  <div>
+    <table>
+      <tbody>
+        <tr>
+          <th>1</th>
+          <th>2</th>
+          <th class="td3">3</th>
+          <th>4</th>
+        </tr>
+      </tbody>
+    <thead>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td class="td3">3</td>
+          <td>4</td>
+        </tr>
+      </thead>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td class="td3">3</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td class="td3">3</td>
+        <td>4</td>
+      </tr>
+      <tfoot>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3 class="td3"</td>
+          <td>4</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  <hr/>
+  <div id="layer1"></div>
+</body>
+</html>

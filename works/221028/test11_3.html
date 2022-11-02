@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test11_3.html</title>
+  <style>
+    /*동등선택자: 쉼표(,) 구분한다.*/
+    ol, ul {         /*li 생략가능*/
+      background-color: violet;
+    }
+    
+  </style>
+</head>
+<body>
+  <h1>선택자(자식/손자)</h1>
+  <h2>길동이가 좋아하는 음식 Best5</h2>
+  <ol>
+    <li>짜장면</li>
+    <li>찐빵</li>
+    <li>과일</li>
+      <ul>
+        <li>사과</li>
+        <li>배</li>
+        <li>바나나</li>
+      </ul>
+    <li>초콜릿</li>
+    <li>피자</li>
+  </ol>
+  <hr/>
+  <h2>길동이가 좋아하는 음식 5가지</h2>
+  <ul>
+    <li>짜장면</li>
+    <li>찐빵</li>
+    <li>과일</li>
+      <ol id="fruit">
+        <li>사과</li>
+          <ul>
+            <li>홍옥</li>
+            <li>국광</li>
+          </ul>
+        <li>배</li>
+        <li>바나나</li>
+      </ol>
+    <li>초콜릿</li>
+    <li>피자</li>
+  </ul>
+</body>
+</html>

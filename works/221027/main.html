@@ -1,0 +1,18 @@
+<html>      <!--프레임은 body가 필요없음-->
+  <head>
+  <!--frameborder : 프레임사이의 경계선표시여부(1:표시, 0:해체)
+  <scrolling : auto,yes,no
+  -->
+    
+    <frameset rows="150px,*,100px" border="0" frameborder="1" framespacing="0px">
+      <frame src="a.html" noresize scrolling="yes" marginheight="0px" marginwidth="0px">     
+      <!--noresize : 사이즈고정-->
+      <frameset cols="180,*,100px">
+        <frame src="b.html" noresize>
+        <frame src="c.html">
+        <frame src="e.html">
+      </frameset>
+      <frame src="d.html">
+    </frameset>
+  </head>
+</html>

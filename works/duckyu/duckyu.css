@@ -1,0 +1,223 @@
+/* duckyu.css*/
+/* PC화면을 주화면으로 기본설계하였음(최소 1024px 기준) */
+
+/*공통사항*/
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "맑은 고딕","굴림","돋움","궁서";
+  font-size: 1em;
+  background: linear-gradient(to bottom, skyblue, white 50%, );
+  background-attachment: fixed;
+}
+ul li {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+a {
+  text-decoration: inherit;
+  columns: inherit;
+}
+
+/*PC모드 설정하기(태플리/모바일에서 지정하지 않음녀 이곳도 공통으로 적용됨*/
+#container {    /* 문서 전체를 의미함 */
+  width: 960px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+#mainHeader{    /* 헤더(타이틀바 영역)*/
+  height: 280px;
+  margin-top: 0px;
+  background-image: url("images/12.jpg");
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+#mainHeader h1{   /*타이틀바의 제목(로고)*/
+  position: absolute;
+  margin-top: 40px;
+  margin-left: 20px;
+}
+
+.header1 a {      /*타이틀바의 제목(로고) 링크 디자인*/
+  color: #ff0;
+  font-size: 2em;
+  text-shadow: 1px 2px 1px black;
+}
+
+#mainNav {      /* 네비게이션(메뉴)바 디자인*/
+  width: 960px;
+  height: 60px;
+  background-color: #060;
+  /* margin-top: -16px; */
+}
+
+#mainNav ul{  /* 네비게이션(메뉴)바 디자인*/  
+  text-align: center;
+  margin: 0px;
+}
+
+#mainNav ul li {
+  float: left;
+  width: 100px;
+  height: 40px;
+  font-size: 1.1em;
+  padding: 20px ;
+}
+
+#mainNav a {
+  display: block;
+  color: #fff;
+  font-weight: bolder;
+}
+#mainNav a:hover {
+  color: #00f;
+}
+
+#content{   /* 본문 전체 영역 */
+  width: 720px;
+  float: left;
+  background-color: #fff;
+  padding-left: 10px;
+}
+
+#footer {   /*푸터영역 (Copyright)*/
+  clear: both;
+  background-color: #000;
+  color: #FFF;
+  text-align: center;
+  padding: 5px 20px;
+}
+
+#sidebar {    /*어사이드(사이드바 : 그림(광고)처리 */
+  width: 200px;
+  float: right;
+  padding: 20px 10px;
+}
+
+#sidebar img{ /*사이드바에 있는 그림처리*/
+  border: 1px solid #aaa;
+  margin-bottom: 12px;
+}
+#sidebar img:hover{ /*사이드바에 있는 그림처리(마우스 오버시*/
+  border: 1px solid #000;
+  opacity: 0.8;
+}
+
+.notice li {    /* 하단 articel 목록에 목록 표시하기 */
+  list-style: circle;
+}
+
+/*태블릿화면설정(최소 600px ~ 최대 1023px)*/
+@media screen and (min-width:600px) and (max-width:1023px){
+  #container {    /* 문서 전체를 의미함 */
+    width: 580px;
+  }
+  #mainHeader{    /* 헤더(타이틀바 영역)*/
+    height: 170px;
+    background-image: url("images/11.jpg");
+  }
+  #mainHeader h1{   /*타이틀바의 제목(로고)*/
+    margin-top: 20px;
+  }
+  
+  .header1 a {      /*타이틀바의 제목(로고) 링크 디자인*/
+    font-size: 1.5em;
+  }
+  
+  #mainNav {      /* 네비게이션(메뉴)바 디자인*/
+    width: 580px;
+  }
+
+  #mainNav ul li {
+    width: 90px;
+    font-size: 1em;
+    padding: 20px 0px 0px 30px;
+  }
+
+  #content{   /* 본문 전체 영역 */
+    width: 550px;
+  }
+  
+  #footer {   /*푸터영역 (Copyright)*/
+    font-size: 0.8em;
+  }
+
+  #sidebar {    /*어사이드(사이드바 : 그림(광고)처리 */
+    width: 550px;
+    padding: 0px 10px;
+  }
+  
+  #sidebar img{ /*사이드바에 있는 그림처리*/
+    border: 1px solid #aaa;
+    margin-bottom: 0 0 12px 0;
+    width: 32%;
+  }
+}
+
+/* 모바일 화면설정(최대 599px) */
+@media screen and (max-width:599px) {
+  #container {  /* 문서 전체를 의미함 */
+    width: 320px;
+  }
+  
+  #mainHeader { /* 헤더(타이틀바 영역) */
+    height: 90px;
+    background-image: url("images/13.jpg");
+  }
+  
+  #mainHeader h1 {  /* 타이틀바의 제목(로고) */
+    margin-top: 15px;
+  }
+  
+  .header1 a {  /* 타이틀바의 제목(로고) 링크 디자인 */
+    font-size: 0.8em;
+  }
+  
+  #mainNav {  /* 네비게이션(메뉴)바 디자인 */
+    width: 320px;
+    height: 0px;
+  }
+  
+  #mainNav ul li {
+    width: 280px;
+  }
+  
+  #mainNav a {
+    display: block;
+    color: brown;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 0 100px 0 -120px;
+    font-size: 0.92em;
+    padding: 10px 0px;
+  }
+
+  #content {  /* 본문 전체 영역 */
+    width: 310px;
+    margin-top: 10px;
+  }
+  
+  #footer {     /* 푸터영역(Copyright) */
+    font-size: 0.6em;
+  }
+  
+  #sidebar {  /* 어사이드(사이드바 : 그림(광고)처리) */
+    width: 320px;
+    padding: 0px;
+  }
+  
+  #sidebar img { /* 사이드바의 그림처리 */
+    border: 1px solid #ccc;
+    margin: 0 2px 0 2px;
+    width: 98%;
+  }
+
+  #sidebar img:hover {
+    border: 1px solid #000;
+    opacity: 0.8;
+  }
+
+}

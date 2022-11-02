@@ -5,8 +5,32 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>test18.html</title>
+  <script>
+    'ues strict';
+    function fCheck() {
+      let gender = myform.gender.value;
+
+      // demo.innerText = gender;
+      if(gender =='남') {
+        demo.innerHTML = "<font color='blue'><b>"+gender+"<b></font>"  
+        }
+        else {
+        demo.innerHTML = "<font color='red'><b>"+gender+"<b></font>"  
+
+      }
+    }
+  </script>
 </head>
 <body>
-  
+  <h2>라디오 버튼값 체크하기</h2>
+  <form name="myform">
+    <div>
+      <input type="radio" name="gender" id="gender1" value="남" checked/>남자
+      <input type="radio" name="gender" id="gender2" value="여" />여자
+      <input type="button" value="값체크" onclick="fCheck()">
+    </div>
+  </form>
+  <hr/>
+  <div id="demo"></div>
 </body>
 </html>

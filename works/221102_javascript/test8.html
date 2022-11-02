@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test8.html</title>
+  <script>
+    'use strict';  /* 사용할 변수를 선언해놓고 써라 */
+    const su1=100;   /* 변수를 한번만 사용할수 있음 */
+    console.log("su1 : " , su1);
+    console.log(typeof(su1));   /*타입 확인하기 typeof()*/
+
+    // su1 = 200;
+    // su1 = "서울";       
+    console.log("su1 : " , su1);
+    console.log(typeof(su1)); 
+
+    let su2 = 200;
+    console.log("su2 :", su2);
+    console.log(typeof(su2));
+
+    let su3 = 300;
+    {                             
+      console.log("su3 : ", su3);
+      console.log("1 :",su2+su3);
+    }
+
+    console.log("2 : ", su2+su3);
+  </script>
+  </head>
+<body>
+  <h2>자바스크립트 학습</h2>
+</body>
+</html>

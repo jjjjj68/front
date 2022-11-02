@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test15.html</title>
+  <script>
+    'use strict'
+    function fCleck() {
+      let su1 = document.getElementById("result").value;
+      let su2 = prompt("수2를 입력하세요");
+      let su3= eval(su2) *2 +30;
+      console.log("su2+" +su2);
+      console.log("su3+" +su3);
+      
+      if(text == "") {
+        alert("수를 입력하세요.")
+      }
+    }
+  </script>
+</head>
+<body>
+  <form name="myform" method="get" action="#">
+    <p>입력창<input type="text" name="result" id="result"></p>
+    <p>결과창<input type="text" name="result" id="result"></p>
+
+    <p><input type="button" value="계산" onclick="fCleck()"></p>
+    <p><input type="reset" value="재계산"></p>
+  </form>
+</body>
+</html>

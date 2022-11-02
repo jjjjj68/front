@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tset14.html</title>
+  <script>
+    'use strict'
+    function add() {
+      let su1 = document.getElementById("su1").value;
+      let su2 = document.getElementById("su2").value;
+      
+      if(su1 == "") {
+        alert("수1을 입력하세요")
+        myform.su1.focus();
+      }
+      else if(su2 =="") {
+        alert("수2을 입력하세요")
+        myform.su2.focus();
+      }
+      else {
+      let res = parseInt(su1) + parseInt(su2);
+      alert("두수의 합? " + res);
+      }
+    }
+    function sub() {
+      let su1 = document.getElementById("su1").value;
+      let su2 = document.getElementById("su2").value;
+      
+      if(su1 == "") {
+        alert("수1을 입력하세요")
+        myform.su1.focus();
+      }
+      else if(su2 =="") {
+        alert("수2을 입력하세요")
+        myform.su2.focus();
+      }
+      else {
+      let res = parseInt(su1) - parseInt(su2);
+      alert("두수의 차? " + res);
+      }
+    }
+    function mul() {
+      let su1 = document.getElementById("su1").value;
+      let su2 = document.getElementById("su2").value;
+      
+      if(su1 == "") {
+        alert("수1을 입력하세요")
+        myform.su1.focus();
+      }
+      else if(su2 =="") {
+        alert("수2을 입력하세요")
+        myform.su2.focus();
+      }
+      else {
+      let res = parseInt(su1) * parseInt(su2);
+      alert("두수의 곱? " + res);
+      }
+    }
+    function div() {
+      let su1 = document.getElementById("su1").value;
+      let su2 = document.getElementById("su2").value;
+      
+      if(su1 == "") {
+        alert("수1을 입력하세요")
+        myform.su1.focus();
+      }
+      else if(su2 =="") {
+        alert("수2을 입력하세요")
+        myform.su2.focus();
+      }
+      else {
+      let res = parseInt(su1) / parseInt(su2);
+      alert("두수의 나누기는? " + res);
+      }
+    }
+  </script>
+
+</head>
+<body>
+  <h2>사칙연산 계산하기</h2>
+  <form name="myform" method="get" action="#"> 
+    <p>첫번째 수<input type="text" name="su1"  autofocus required  /></p>
+    <p>두번째 수<input type="text" name="su2" required  /></p>
+    <p>
+      <input type="button" value="더하기" onclick="add()"/>
+      <input type="button" value="뺄셈" onclick="sub()"/>
+      <input type="button" value="곱셈" onclick="mul()"/>
+      <input type="button" value="나누기" onclick="div()"/>
+    </p>
+  </form>
+</body>
+</html>

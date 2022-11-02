@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test17.html</title>
+  <script>
+    'use strict'
+    function fCheck() {
+      let address = document.getElementById("address").value;
+
+      if(address.trim() == "") {
+        alert("주소를 입력하세요")
+        document.getElementById("address").fousc();
+      }
+      else{
+        document.myform.address.value = address;
+        // demo.innerText = address;    /*텍스트로만 사용할때.*/
+        demo.innerHTML = "<a href='http://" + address + "' target='_blank>" + address + "</a>";       /*html로 버튼사용할때.*/
+        <input type="button" value="지우기" onclick='urlClear()' />
+      }
+    }
+    function urlClear() {
+      myform.address.value="";
+      demo.innerText="";
+    }
+  </script>
+</head>
+<body>
+  <p>
+    이동할 주소를 입력후 이동버튼을 클릭하면 입력된 주소가 
+    가상(demo)에 출력되어, 그 주소를 클릭하면 새창으로 이동합니다.
+  </p>
+  <hr/>
+  <form name="myform">
+    <div>
+      이동할 주소 : <input type="text" name="address" id="address" placeholder="이동할 주소를 입력하세요" />
+      <input type="button" value="확인" onclick="fCheck()" />
+    </div>
+  </form>
+  <hr/>
+  <div id="demo"></div>
+</body>
+</html>

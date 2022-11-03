@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>구구단2</title>
+  <script>
+    'use strict';
+
+    function fCheck() {
+      /* document.write("출력") */
+      let startDan = document.getElementById("startDan").value;
+      let endDan = document.getElementById("endDan").value;
+      let temp;
+
+      if(startDan > endDan) {
+        temp = startDan;
+        startDan = endDan;
+        endDan =temp;
+      }
+
+      let cnt = 0;
+      document.write("<table border><tr>");
+      for(let i=startDan; i<=endDan; i++) {
+        cnt++;
+        document.write("<td>");
+        document.write("* "+i+" 단 *<br/>");
+        for(let j=1; j<=9; j++) {
+          document.write(i+"*"+j+"="+(i*j)+"<br/>");
+        }
+        if(cnt < 3) {
+          document.write("</td>");
+        }
+        else {
+          document.write("</td></tr><tr>");
+          cnt = 0;
+        }
+      }
+      document.write("</tr></table>");
+    }
+  </script>
+</head>
+<body>
+  <h2>구구단 출력</h2>
+  <p>시작단과 끝단을 입력후 버튼을 누르세요</p>
+  <!-- 출력은 항상 낮은단에서 높은단으로 출력하세요 -->
+  <form name="myform">
+    시작단 <input type="number" name="startDan" id="startDan" /> ~
+    끝단 <input type="number" name="endDan" id="endDan" />
+    <input type="button" value="출력" onclick="fCheck()"/>
+  </form>
+</body>
+</html>

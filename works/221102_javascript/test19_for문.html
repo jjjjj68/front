@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test19_for문.html</title>
+  <script>
+    'use strict'
+
+    function forCheck() {
+      
+      // for(let i=0; i<10; i++) {
+      //   document.write(i + "<br/>");
+      //   demo.innerHTML +=  "<b>" + i + " / </b>";
+      // }
+      
+      let str = '';
+      for(let i=0; i<10; i++) {
+        str += i + " / ";
+      }
+      demo.innerHTML += "<b>" + str + "</b>";
+    }
+  </script>
+</head>
+<body>
+  <h2>for문 연습</h2>
+  <p><input type="button" value="for문연습" onclick="forCheck()"></p>
+  <hr/>
+  <div id="demo"></div>
+</body>
+</html>

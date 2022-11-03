@@ -1,0 +1,83 @@
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator.html</title>
+    <script>
+        'use strict'
+        function num(su) {
+            document.getElementById("cc").value += su;
+        }
+        function help(su){
+            if(su=="0") {
+                document.getElementById("cc").value ="";
+            }
+            else if(su==1) {
+                document.getElementById("cc").value+="+";
+            }
+            else if(su==2) {
+                document.getElementById("cc").value+="-";
+            }
+            else if(su==3) {
+                document.getElementById("cc").value+="*";
+            }
+            else{
+                document.getElementById("cc").value+="/";
+            }
+        }
+
+        function cnt() {
+            let cnt = eval(document.getElementById("cc").value);
+            document.getElementById("cc").value = parseFloat(cnt);
+    }   
+    </script>
+    <style>
+        #calculator {
+            margin: 0px auto;
+            padding-left: 5px;
+            width: 280px;
+            height: 400px;
+            background-color: cornflowerblue;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        
+        .btn {
+            width: 55px;
+            height: 60px;
+            margin-top: 10px;
+        }
+        #cc {
+            width: 250px;
+            height: 50px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="calculator">
+        <form name="myform" method="get" action="#">
+            <p><input type="text" name="cc" id="cc"></p>
+            <div>
+                <input type="button" value="C" class="btn" id="clear" onclick="help(0)">
+                <input type="button" value="+" class="btn" id="plus" onclick="help(1)">
+                <input type="button" value="-" class="btn" id="minus" onclick="help(2)">
+                <input type="button" value="X" class="btn" id="mulp" onclick="help(3)">
+                <input type="button" value="1" class="btn" id="su1" onclick="num(1)">
+                <input type="button" value="2" class="btn" id="su2" onclick="num(2)">
+                <input type="button" value="3" class="btn" id="su3" onclick="num(3)">
+                <input type="button" value="%" class="btn" id="divi" onclick="help(4)">
+                <input type="button" value="4" class="btn" id="su4" onclick="num(4)">
+                <input type="button" value="5" class="btn" id="su5" onclick="num(5)">
+                <input type="button" value="6" class="btn" id="su6" onclick="num(6)">
+                <input type="button" value="=" class="btn" id="equal" onclick="cnt()">
+                <input type="button" value="7" class="btn" id="su7" onclick="num(7)">
+                <input type="button" value="8" class="btn" id="su8" onclick="num(8)">
+                <input type="button" value="9" class="btn" id="su9" onclick="num(9)">
+                <input type="button" value="0" class="btn" id="su0" onclick="num(0)">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

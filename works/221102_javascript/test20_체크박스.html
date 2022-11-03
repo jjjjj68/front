@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>체크박스연습1</title>
+  <script>
+    'use strict'
+
+    function fCheck() {
+      let hobby = '';
+      if(document.getElementById("hobby1").checked) {
+        hobby += document.getElementById("hobby1").value + "/";
+      }
+      if(document.getElementById("hobby2").checked) {
+        hobby += document.getElementById("hobby2").value + "/";
+      }
+      if(document.getElementById("hobby3").checked) {
+        hobby += document.getElementById("hobby3").value + "/";
+      }
+      if(document.getElementById("hobby4").checked) {
+        hobby += document.getElementById("hobby4").value + "/";
+      }
+      if(document.getElementById("hobby5").checked) {
+        hobby += document.getElementById("hobby5").value + "/";
+      }
+      demo.innerHTML = hobby + "<input type = 'button' value ='지우기' onclick='fClear()'/>";
+    }
+
+    function fClear() {
+      document.getElementById("hobby1").checked = false;
+      document.getElementById("hobby2").checked = false;
+      document.getElementById("hobby3").checked = false;
+      document.getElementById("hobby4").checked = false;
+      document.getElementById("hobby5").checked = false;
+      demo.innerText = "";
+    }
+  </script>
+</head>
+<body>
+  <h2>체크박스 연습</h2>
+  <form name="myform">
+    <p><b>취미를 선택해주세요</b></br></br> 
+      <input type="checkbox" name="hobby" id="hobby1" value="등산" />등산 &nbsp;
+      <input type="checkbox" name="hobby" id="hobby2" value="낚시" />낚시 &nbsp;
+      <input type="checkbox" name="hobby" id="hobby3" value="볼링" />볼링 &nbsp;
+      <input type="checkbox" name="hobby" id="hobby4" value="바둑" />바둑 &nbsp;
+      <input type="checkbox" name="hobby" id="hobby5" value="수영" />수영 &nbsp;
+      <button type="button" value="출력" onclick="fCheck()" ></button>
+    </p>
+  </form>
+  <div id="demo"></div>
+</body>
+</html>

@@ -9,14 +9,14 @@
     'use strict';
     function fCheck() {
       let gender;
-      if(document.getElementsByName("gender")[0].value == '남') gender = '남';
-      if(document.getElementsByName("gender")[1].value == '여') gender = '여';
-      // if(document.getElementById("gender1").value == '남') gender = '남';
-      // if(document.getElementById("gender2").value == '여') gender = '여';
-
-      //demo.innerText = gender;
-      if(document.getElementById("gender1").checked) gender = "남";
-      if(document.getElementById("gender2").checked) gender = "여";
+      // if(document.getElementById("gender1").value == '남') {
+      //   gender = '남';
+      // }
+      // if(document.getElementById("gender2").value == '여') {
+      //   gender = '여';
+      // }
+      if(document.getElementsByName("gender")[0].checked) gender = "남";
+      if(document.getElementsByName("gender")[1].checked) gender = "여";
 
       // demo.innerText = gender;
       if(gender == '남') {

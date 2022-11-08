@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>화면중앙에 새창띄우기</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    'use strict';
+
+    function newWin() {
+      let url = "t15_child.html";
+      let winWidth = 500;
+      let winHeight = 400;
+      let x = (screen.width/2) - (winWidth/2);
+      let y = (screen.height/2) - (winHeight/2);
+      let opt = "width="+winWidth+",height="+winHeight+",left="+x+",top="+y;
+      window.open(url,"nWin",opt);
+    }
+  </script>
+</head>
+<body>
+<p><br/></p>
+<div class="container">
+  <h2>화면중앙에 새창띄우기(부모창)</h2>
+  <p>버튼을 클릭하면 화면중아에 가로 500px, 세로 400px의 새창(t15_child.html)을 띄우시오</p>
+  <p>
+    <input type="button" value="중앙에새창띄우기" onclick="newWin()" class="btn btn-success"/>
+  </p>
+  <hr/>
+  <div id="demo"></div>
+</div>
+<p><br/></p>
+</body>
+</html>

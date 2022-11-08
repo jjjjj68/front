@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>해상도 연습</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    'use strict';
+
+    function deviceCheck() {
+      let str = "";
+      str += "화면 해상도의 가로크기 : " + screen.width + "px<br/>";
+      str += "화면 해상도의 세로크기 : " + screen.height + "px<br/>";
+      str += "사용자 작업영역 가로크기 : " + screen.availWidth + "px<br/>";
+      str += "사용자 작업영역 세로크기 : " + screen.availHeight + "px<br/>";
+      str += "표현 가능 색상수 : " + Math.pow(2,screen.colorDepth) + "개<br/>";
+      str += "픽셀당 색상수 : " + Math.pow(2,screen.pixelDepth) + "개<br/>";
+      // str += "화면 해상도의 가로크기 : " + screen.width + "<br/>";
+      
+      demo.innerHTML = str;
+    }
+    
+  </script>
+</head>
+<body>
+  <p><br/></p>
+  <div class="container">
+    <h2>screen객체를 이용한 모니터(Device)의 해상도 알아오기</h2>
+    <p><input type="button" value="해상도출력" onclick="deviceCheck() " class="btn btn-success m-3"></p>
+    <hr/>
+    <div id="demo"></div>
+  </div>
+  <p><br/></p>
+  

@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    'use strict';
+
+    function fCheck() {
+      let goUrl = document.getElementById("goUrl").value;
+
+      if(goUrl == "") {
+        lert("이동할 항목을 선택해주세요!");
+      }
+      else
+        alert("이동할 주소는 ?" + goUrl);
+        location = goUrl;
+      }
+  </script>
+  <style>
+    .b {
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <p><br/></p>
+  <div class="container">
+    <h2>콤보상자연습</h2>
+    <form name="myform">
+      <div class="form-group"><label for="goUrl">이동하고 싶은 곳을 선택하세요</label></div>
+      <div>                           
+        <select name="goUrl" id="goUrl" onchange="fCheck()" class="form-control mb-2">
+          <option value="">어디로 갈까요?</option>
+          <option value="http://www.naver.com">네이버</option>
+          <option value="http://www.daum.net">다음</option>
+          <option value="http://www.imbc.com">MBC방송국</option>
+          <option value="http://www.kbs.co.kr">KBC방송국</option>
+          <option value="t10_comboBox.html">콤보박스연습</option>
+        </select>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

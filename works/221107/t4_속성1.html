@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    'use strict';
+
+    function font16() {
+      document.getElementById("demo").style.fontSize='32px';
+    }
+  </script>
+</head>
+<body>
+  <p><br/></p>
+  <div class="container">
+    <h2>lnLine명령을 통한 글자 속성 변경</h2>
+    <p>
+      <button type="button" onclick="font16()" class="btn btn-danger">글꼴2em(32px)</button>
+      <button type="button" onclick="document.getElementById('demo').style.fontSize='16px';" class="btn btn-success">글꼴1em(16px)</button>
+      <button type="button" onclick="document.getElementById('demo').style.fontSize='8px';" class="btn btn-primary">글꼴1em(16px)</button>
+    </p>
+    <hr/>
+    <div id="demo">자바스크립트명령으로 글자 크기를 변경합니다.</div>
+  </div>
+  <p><br/></p>
+  
+</body>
+</html>

@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>화면중앙에 새창띄우기</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    'use strict';
+
+
+    function newWin() {
+      let url = "t15_child.html";
+      let winWidth = document.getElementById("winWidth").value;
+      if(winWidth<300) {winWidth=300;}
+      let winHeight = document.getElementById("winHeight").value;
+      if(winHeight<200) {winHeight=200;}
+      let x = (screen.width/2) - (winWidth/2);
+      let y = (screen.height/2) - (winHeight/2);
+      let opt = "width="+winWidth+",height="+winHeight+",left="+x+",top="+y;
+      window.open(url,"nWin",opt);
+    }
+  </script>
+</head>
+<body>
+<p><br/></p>
+<div class="container">
+  <h2>화면중앙에 새창띄우기(부모창)</h2>
+  <p>
+    텍스트 박스에 읜도우 가로크기와 세로크기를 입력받아서<br/>
+    버튼을 클릭하면 화면중앙에 사용자가 지정한 크기로 새창(t15_child.html) 띄우시오<br/>
+    단, 최소 창의 크기는 (300px * 200px)
+  </p>
+  <form name="myform">
+    <p>
+      <div>
+        윈도우 가로크기 : 
+        <input type="number" name="winWidth" id="winWidth" value="500" class="form-control" />
+      </div>
+      <div>
+        윈도우 세로크기 : 
+        <input type="number" name="winHeight" id="winHeight" value="500" class="form-control" />
+      </div>
+    </p>
+  </form>
+
+    <input type="button" value="중앙에새창띄우기" onclick="newWin()" class="btn btn-success"/>
+  </p>
+  <hr/>
+    <pre>
+      :새창에 사용되는 이름(name)?
+        _blank : 새창(기본값), _parent : 부모프레임에 열린다. _top :로드된 프레임셋을 다시 대체함.
+        _self:자신창을 띄운다.
+
+      :새창에 사용되는 옵션(option)?
+        width : 창의 폭
+        height : 창의 높이
+        left : x축 위치
+        top : y축 위치
+
+        ex) xxxx = yes;
+        fullscreen(yes/no/auto) :전체화면모드(지원X)
+        titlebar(yes/no/auto) : 제목표시줄의 표시여부 결정
+        location(yes/no/auto) :주소표시줄의 출력여부를 결정
+        menubar(yes/no/auto) : 메뉴표시줄의 표시여부를 결정
+        resizable(yes/no/auto) : 창의 크기를 제어 결정
+        scrollbars(yes/no/auto) : 스크롤바의 표시여부 결정
+        toolbar(yes/no/auto) : 툴바(도구상자)의 표시여부 결정
+
+
+    </pre>
+</div>
+<p><br/></p>
+</body>
+</html>

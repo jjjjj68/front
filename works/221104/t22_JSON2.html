@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON방식에 대한 이해</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    'use strict';
+    let str = "";
+    
+    function stringifyCheck() {
+      // 자바 객체변수 정의
+      const obj = {
+        name: "홍길동",
+        age: 29,
+        job: "프로그래머"
+      };
+      str = JSON.stringify(obj);  // 자바 객체변수의 내용을 JSON으로 변환함.
+      console.log(str);   // JSON으로 변환된 내용을 출력하고 있다. 결과 : {"name":"홍길동","age":29,"job":"프로그래머"}
+    }
+
+    function parseCheck() {
+      stringifyCheck();  // JSON문자열형태를 만들기위해 앞의 함수를 호출했다. 그 결과로 str에는 JSON형식의 자료가 들어있게된다.
+
+      const obj = JSON.parse(str); // JSON 문자열 형태의 데이터가 JavaScript 객체의 형태로 변환된다.
+      console.log("obj : ", obj);
+      /* 결과 : 자바스크립트 객체형식으로 들어가게 된다. 18번행의 내용과 같이 처리된다.(아래참조)
+        {name: '홍길동', age: 29, job: '프로그래머'}
+      */
+    }
+  </script>
+</head>
+<body>
+<p><br/></p>
+<div class="container">
+  <h2>JSON.stringify() / JSON.parse()</h2>
+  <p>JSON.stringify()<br/>
+    stringify 메서드는 JavaScript 객체를 인자로 받고 JSON 문자열을 반환.
+    <input type="button" value="stringify연습" onclick="stringifyCheck()" class="btn btn-success"/>
+  </p>
+  <hr/>
+  <p>JSON.parse()<br/>
+    parse 메서드는 JSON 문자열을 인자로 받고 결과값으로 JavaScript 객체를 반환.
+    <input type="button" value="parse연습" onclick="parseCheck()" class="btn btn-primary"/>
+  </p>
+  <hr/>
+</div>
+<p><br/></p>
+</body>
+</html>

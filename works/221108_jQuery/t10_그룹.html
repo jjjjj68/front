@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>그림 속성 변경</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+  <script>
+    'use strict';
+    $(document).ready(function() {
+      // $('div span').css("color",'orange');
+      $('div span:first').css("color",'orange');    //최초 한개만 적용된다.
+
+      $('div span:first-child').css({"color":'orange', "fontSize":'20px'});   //div 별로 그룹을 묶고, 그 중에서 첫번째 요소만 적용.
+      $('div span:only-child').css({"textDecoration":'underline', "fontSize":'40px'});   //div only 자식이 한개인 경우만 적용.
+      $('div span:only-of-type').css({"border":'1px solid red', "fontSize":'10px'});   //div별로 그룹을 묶고, 그 중에서 태극 ㅏ1개인것만 적용
+    });
+    
+  </script>
+</head>
+<body>
+  <div>
+    <span>1짜장면</span>
+    <span>1짬뽕</span>
+    <span>1탕수육</span>
+    <span>1뽁금팜</span>
+    <span>1팔포채</span>
+    <span>1칠리새우</span>
+  </div>
+  <hr/>
+  <div>
+    <b>2짜장면</b>
+    <span>2짬뽕</span>
+    <span>2탕수육</span>
+    <span>2뽁금팜</span>
+    <span>2팔포채</span>
+    <span>2칠리새우</span>
+  </div>
+  <hr/>
+  <div>
+    <span>3짜장면</span>
+
+  </div>
+  <hr/>
+  <div>
+    <span>4짜장면</span>
+    <span>4짬뽕</span>
+    <span>4탕수육</span>
+    <span>4뽁금팜</span>
+    <span>4팔포채</span>
+    <span>4칠리새우</span>
+  </div>
+  <div>
+    <b>5짜장면</b>
+    <b>5짬뽕</b>
+    <b>5탕수육</b>
+    <b>5뽁금팜</b>
+    <b>5팔포채</b>
+    <span>5칠리새우</span>
+  </div>
+  <hr/>
+</body>
+</html>

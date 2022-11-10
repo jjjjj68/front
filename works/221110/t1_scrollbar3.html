@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스크롤바제어</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script>
+    'use strict';
+    
+    $(function(){
+      let no = 0;
+      let chai ;
+      let scrollTop;
+      let scrollHeight;
+      let boxHeight;
+
+      // 초기데이터를 DB에서 가져와 레이어(panel)에 추가시켜준다.
+      function makeDate() {
+        let str = '';
+        for(let i=0; i<20; i++) {
+          no++;
+          str += "<h3>Content: " + no + "</h3>";
+        }
+        $("#panel").append(str);
+      }
+
+      makeDate();   // 초기데이터를 레이어에 담아서 출력시켜주기위해 호출한다.
+
+      $('#container #panel').on('scroll', function(evt){
+        let scrollTop = $(this).scrollTop();
+        let scrollHeight = $(this).prop('scrollHeight');
+        let boxHeight = $(this).height();
+
+        
+        // let chai = scrollHeight - boxHeight;
+        chai = scrollHeight - scrollTop;
+        
+        if(chai === boxHeight) {
+          console.log(scrollTop);
+          $(".processing").show().delay(1000).hide(500, function(){
+            console.log(chai);
+            makeDate();
+          });
+        }
+      });
+
+      // 처음으로 버튼 클릭시
+      $('#btnStart').click(function(){
+        $('#container #panel').scrollTop(0);
+      });
+
+      // 끝으로 버튼 클릭시
+      $('#btnEnd').click(function(){
+        scrollTop = $('#panel').scrollTop();
+        scrollHeight = $('#panel').prop('scrollHeight');
+        boxHeight = $('#panel').height();
+
+        chai = scrollHeight - boxHeight;
+
+        $('#container #panel').scrollTop(chai);
+      });
+    });
+  </script>
+  <style>
+    #container {width:600px;}
+    #panel {
+      width: 600px;
+      height: 300px;
+      overflow: auto;
+      border: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+<p><br/></p>
+<!-- <div class="container"> -->
+<div class="card-body">
+  <div>
+    <input type="button" value="처음으로 이동" id="btnStart" class="btn btn-secondary"/>
+    <input type="button" value="끝으로 이동" id="btnEnd" class="btn btn-secondary"/>
+  </div>
+  <h2>게시목록리스트</h2>
+  <div id="container">
+    <div id="panel"></div>
+    <div class="processing" style="display:none; text-align:center;">
+      <img src="../../images/processing.gif"/>
+    </div>
+  </div>
+</div>
+<p><br/></p>
+</body>
+</html>
